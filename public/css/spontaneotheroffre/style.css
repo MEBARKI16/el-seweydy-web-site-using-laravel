@@ -1,0 +1,18 @@
+#employchoix {
+    width: 100px;
+}
+
+#spontaneotheroffre{
+    background-size: auto;
+    background-color: #dadada;
+    color: black;
+    font-weight: 500;
+    margin-top: -50px;
+    padding-top: 20px;
+}
+
+#spontaneotheroffre, h3{
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+

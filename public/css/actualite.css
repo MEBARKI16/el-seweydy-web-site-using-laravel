@@ -1,0 +1,218 @@
+.search-container{
+    position: relative;
+    display: inline-block;
+}
+
+#actSearchInput{
+    border: 2px solid;
+    border-color: #dadada;
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    font-weight: 100px;
+    text-decoration: solid;
+    text-transform: capitalize;
+    text-align: justify;
+    padding-right: 100px;
+}
+
+/**  **/
+#actSearchBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-radius: 50px;
+    border: 5px transparent;
+ }
+
+.fa.fa-search{
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+}
+ 
+/* @media only screen and (max-width: 800px) */
+#actSearchInput{
+    border: 2px solid;
+    border-color: #dadada;
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    font-weight: 100px;
+    text-decoration: solid;
+    text-transform: capitalize;
+    text-align: justify;
+    padding-right: 100px;
+}
+    
+/**  **/
+#actSearchBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-radius: 50px;
+    border: 5px transparent;
+    }
+
+.fa.fa-search{
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+}
+
+
+
+/** Carousel CSS **/
+.carousel-caption{
+    text-align: left; 
+    padding-right: 30rem
+}
+
+.carousel-caption > h5 {
+    background-color: orange; 
+    color: aliceblue; 
+    font-size: 24px; 
+    text-align: center;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    border-radius: 30px
+}
+
+.carousel-caption > p{
+    font-size: 26px; 
+    color: aliceblue; 
+    text-align: left; 
+    text-transform: uppercase; 
+    font-weight: 600;
+    text-align: center;
+}
+
+/** Evenements (Cards) **/
+/**
+.card-img-top{
+position: relative;
+} **/
+
+
+
+/* Media queries for different screen sizes 
+@media screen and (max-width: 767px) {
+    /* Styles for screens less than or equal to 767px wide 
+    .card-title > button{
+        background-color: brown;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        width: 35%;
+        height: 40px;
+        text-align: center;
+        border-radius: 20px;
+        position: absolute;
+        top: 29%;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for screens between 768px and 1023px wide 
+    .card-title > button{
+        background-color: brown;
+        color: white; 
+        font-size: 14px;
+        font-weight: 500;
+        width: 35%;
+        height: 40px;
+        text-align: center;
+        border-radius: 20px;
+        position: absolute;
+        top: 48%;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    /* Styles for screens wider than 1024px 
+    .card-title > button{
+        background-color: brown;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        width: 35%;
+        height: 40px;
+        text-align: center;
+        border-radius: 20px;
+        position: absolute;
+        top: 47.2%;
+    }
+  }
+
+.card-body > .card-text{
+    text-transform: uppercase;
+    text-align: justify;
+    color: black;
+    font-size: 16px ;
+    font-weight: 700;
+}
+
+#lirelasuite {
+    color: darkgrey;
+    text-transform: capitalize;
+    font-size: 14px;
+    float: right;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/** Pagination 
+
+.page-item > a {
+    color: black;
+}
+
+.pagination > li > a{
+    font-size: 28px;
+}
+
+.pagination > li > a > p{
+    color: black;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.pagination > li > a > i {
+    color: black;
+}
+
+/** Detail evenement CSS 
+div#evenShow1{
+    padding-left: 80px;
+}
+
+div#evenShow2{
+    padding-right: 80px;
+}
+
+@media only screen and (max-width: 800px){
+    /** Detail evenement CSS 
+    div#evenShow1{
+        padding-left: 0px;
+    }
+
+    div#evenShow2{
+        padding-right: 0px;
+    }
+}
