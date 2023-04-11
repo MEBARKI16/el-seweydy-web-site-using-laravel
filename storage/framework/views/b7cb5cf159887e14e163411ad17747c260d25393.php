@@ -1,0 +1,1 @@
+<?php /**PATH C:\wamp64\new\www\Elsewedy Site\elsewedyWebsite\resources\views/actualite.blade.php ENDPATH**/ ?>

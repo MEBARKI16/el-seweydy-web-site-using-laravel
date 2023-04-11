@@ -2,7 +2,80 @@
 <!--APropos's section-->
 @section('title','CARRIERE')
 @section('content')
-    
+<style>
+  
+.ps2{
+          font-size:25px !important;
+        }
+        @media screen and (max-width: 1520px) {
+
+.ps2{
+  font-size:20px !important;
+}
+}
+@media screen and (max-width: 1328px) {
+
+.ps2{
+font-size:15px !important;
+}
+}
+@media screen and (max-width: 1028px) {
+
+.ps2{
+font-size:10px !important;
+}
+}
+.hs{
+          font-size:40px !important;
+          width: 40%;
+        }
+        @media screen and (max-width: 1520px) {
+
+.hs{
+  font-size:30px !important;
+}
+}
+@media screen and (max-width: 1328px) {
+
+.hs{
+font-size:20px !important;
+}
+}
+@media screen and (max-width: 1028px) {
+
+.hs{
+font-size:15px !important;
+}
+}
+@media screen and (max-width: 1028px) {
+
+.hs{
+width: 60% !important;
+}
+}
+.hc{
+          font-size:25px !important;
+        }
+        @media screen and (max-width: 1520px) {
+
+.hc{
+  font-size:20px !important;
+}
+}
+@media screen and (max-width: 1328px) {
+
+.hc{
+font-size:15px !important;
+}
+}
+@media screen and (max-width: 400px) {
+
+.hc{
+font-size:10px !important;
+}
+}
+
+        </style>
 <!-- cover photo -->
 <div class="card text-white">
     <img class="card-img" src="{{ asset('public/images/WL_ELSWEDY_Elements_Page_Actualite/3072x1164/Banner.png') }}" alt="Card image">
@@ -14,18 +87,35 @@
 <div class="container pt-4">
 
     <!-- Detail Evenement -->
-    <b><hr style="border: none; border-top: 2px solid black; height: 1px;"></b>
-    <div class="text-center" style="padding-bottom: 90px">
+   
+    <div style="border: none;margin-top:60px; border-bottom: 1px solid black; height: 0px;"></div>
+    <div class="text-center" style="padding-bottom: 90px;width:250px;margin:auto;margin-bottom:50px;border-top: 2px solid red;padding:20px;margin-top:0">
         <h1 style="color: black;">International</h1>
     </div>
 
-
+    <style>
+            .containerpartage {
+                display: flex;
+         
+                align-items: center;
+            }
+    
+            .icon {
+                font-size: 30px !important;
+                margin-bottom: 8px;
+            }
+        </style>
     <div class="col-xxl-12 col-xl-12 col-md-12 col-sm-12 col-xm-12">
         <div class="card" style="border: none">
             <div class="card-body">  
                 <h5 class="card-title" style="color: black; text-transform: uppercase; text-align: center; font-size: 33px; font-weight: 800; padding-bottom: 30px">la présidente de la tanzanie célèbre la mise en eau et le remplissage de jnhpp avec "elsewedy electric" et "the arab contractors"</h5>
-                <a href="#" class="btn btn-primary" style="float: left; background-color: transparent; color: black; font-size: 20px; border-color: transparent">Février 2023</a>
-                <a href="#" class="btn btn-primary" style="float: right; background: transparent; border: 1px solid black; border-radius: 34px; text-align: center; width: 28%; color: black; font-size: 18px">Partager l'article<i class="bi bi-share" style="color: brown; padding-left: 10px" ></i> </a>
+                <a href="#" class="btn " style="float: left; background-color: transparent; color: black; font-size: 20px; border-color: transparent;font-weight:normal">Février 2023</a>
+                <a href="#" class="btn " style="float: right; background: transparent; border: 1px solid black; border-radius: 34px; text-align: center;padding-left:3%;padding-right:3%; color: black; font-size: 20px;font-weight:normal">	<div class="containerpartage">
+                       <h1 style="font-size:20px">Partager l'article</h1>
+                    <i class="icon fa-sharp fa-solid fa-share-nodes" style="color: red; padding-left: 10px;font-size:30px;"></i>
+                        
+                    
+                    </div>   </a>
               </div>
             <img class="card-img-top" src="{{ asset('public/images/WL_ELSWEDY_Elements_Page_Actualite/3072x1164/1.png') }}" alt="Card image cap">  
         </div>
@@ -54,41 +144,59 @@
             Actualités connexes
         </h1>
     </div>
-    <div id="evenShow1" class="col-xxl-4 col-xl-4 col-md-4 col-sm-12 col-xm-12" >
-        <div class="card">
-            <img class="card-img-top" src="{{ url('public/images/WL_ELSWEDY_Elements_Page_Actualite/3072x1113/1.png') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title btn btn-danger">National</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <a id="lirelasuite" class="card-text" href="#"><p class="text-left">Lire La suite   </p><i class="fa fa-arrow-right" aria-hidden="true" style="color: brown; display: flex; padding-top: 12px; padding-left: 10px"></i></a>
+    <div class="row pt-4" style="width:80%;margin:auto">
+  <div id="evenShow1" class="col-xxl-4 col-xl-4 col-md-4 col-sm-12 col-xm-12 mb-3" >
+        <div class="card" style="border:none;">
+                <div style="position:relative;" >
+                    <img class="card-img-top" style="width:100%;height:100%" src="{{ url('public/images/WL_ELSWEDY_Elements_Page_Actualite/3072x1113/1.png') }}" alt="Card image cap">
+                <h5 class="card-title text-center titre-img hc" style="background-color:#E12630;color:white;position:absolute;bottom:-30px;left:20px;padding:15px;border-radius:30px;padding-left:10%;padding-right:10%">National</h5>
+                </div>
+               
+                <div class="card-body" style="margin-top:20px">
+                    <p class="card-text ps2" style='color:black;font-weight:bold'>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text ps2" style='color:black;font-weight:normal'>Fev 2023</p>
+  
+                    <a id="lirelasuite" class="card-text ps2" style="color:black;font-weight:normal" href="{{ route('detailevenement') }}"><div style="display:flex;justify-content:flex-end;align-items:center"><p class="card-text titre-img" style='color:black;font-weight:normal;padding-top:4px'>Lire La suite</p>  <div style="width:40px;border:1px solid #E12630;margin-left:10px"></div><i class="fa-sharp fa-solid fa-play" style="color:#E12630;font-size:15px"></i></div> </a>
+             
+                </div>
             </div>
-        </div>
     </div>
 
-    <div class="col-xxl-4 col-xl-4 col-md-4 col-sm-12 col-xm-12">
-        <div class="card">
-            <img class="card-img-top" src="{{ url('public/images/WL_ELSWEDY_Elements_Page_Actualite/3072x1113/2.png') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title btn btn-danger" style="background-color: blue">Economie</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <a id="lirelasuite" class="card-text" href="#"><p class="text-left">Lire La suite   </p><i class="fa fa-arrow-right" aria-hidden="true" style="color: brown; display: flex; padding-top: 12px; padding-left: 10px"></i></a>
-            </div>
-        </div> 
+    <div class="col-xxl-4 col-xl-4 col-md-4 col-sm-12 col-xm-12 mb-3" >
+            <div class="card" style="border:none;">
+                    <div style="position:relative;" >
+                        <img class="card-img-top" style="width:100%;height:100%" src="{{ url('public/images/WL_ELSWEDY_Elements_Page_Actualite/3072x1113/1.png') }}" alt="Card image cap">
+                    <h5 class="card-title text-center titre-img hc" style="background-color:#E12630;color:white;position:absolute;bottom:-30px;left:20px;padding:15px;border-radius:30px;padding-left:10%;padding-right:10%">National</h5>
+                    </div>
+                   
+                    <div class="card-body" style="margin-top:20px">
+                        <p class="card-text ps2" style='color:black;font-weight:bold'>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text ps2" style='color:black;font-weight:normal'>Fev 2023</p>
+      
+                        <a id="lirelasuite" class="card-text ps2" style="color:black;font-weight:normal" href="{{ route('detailevenement') }}"><div style="display:flex;justify-content:flex-end;align-items:center"><p class="card-text titre-img" style='color:black;font-weight:normal;padding-top:4px'>Lire La suite</p>  <div style="width:40px;border:1px solid #E12630;margin-left:10px"></div><i class="fa-sharp fa-solid fa-play" style="color:#E12630;font-size:15px"></i></div> </a>
+                 
+                    </div>
+                </div>
     </div>
 
-    <div id="evenShow2" class="col-xxl-4 col-xl-4 col-md-4 col-sm-12 col-xm-12">
-        <div class="card">
-            <img class="card-img-top" src="{{ url('public/images/WL_ELSWEDY_Elements_Page_Actualite/3072x1113/1.png') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title btn btn-danger">National</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <a id="lirelasuite" class="card-text" href="#"><p class="text-left">Lire La suite   </p><i class="fa fa-arrow-right" aria-hidden="true" style="color: brown; display: flex; padding-top: 12px; padding-left: 10px"></i></a>
-            </div>
-        </div>
+    <div id="evenShow2" class="col-xxl-4 col-xl-4 col-md-4 col-sm-12 col-xm-12 mb-3">
+            <div class="card" style="border:none;">
+                    <div style="position:relative;" >
+                        <img class="card-img-top" style="width:100%;height:100%" src="{{ url('public/images/WL_ELSWEDY_Elements_Page_Actualite/3072x1113/1.png') }}" alt="Card image cap">
+                    <h5 class="card-title text-center titre-img hc" style="background-color:#E12630;color:white;position:absolute;bottom:-30px;left:20px;padding:15px;border-radius:30px;padding-left:10%;padding-right:10%">National</h5>
+                    </div>
+                   
+                    <div class="card-body" style="margin-top:20px">
+                        <p class="card-text ps2" style='color:black;font-weight:bold'>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text ps2" style='color:black;font-weight:normal'>Fev 2023</p>
+      
+                        <a id="lirelasuite" class="card-text ps2" style="color:black;font-weight:normal" href="{{ route('detailevenement') }}"><div style="display:flex;justify-content:flex-end;align-items:center"><p class="card-text titre-img" style='color:black;font-weight:normal;padding-top:4px'>Lire La suite</p>  <div style="width:40px;border:1px solid #E12630;margin-left:10px"></div><i class="fa-sharp fa-solid fa-play" style="color:#E12630;font-size:15px"></i></div> </a>
+                 
+                    </div>
+                </div>
     </div>
+    </div>
+  
 
 </div>
 

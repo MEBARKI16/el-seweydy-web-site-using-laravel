@@ -30,15 +30,34 @@
     <!-- Actualite CSS -->
     <link rel="stylesheet" href="{{ asset('public/css/actualite.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <style>
+        .navbar-nav .nav-item a:hover {
+      color: red; /* Change to your desired background color */
+   
+        }
+        .xx4{
+background-color:transparent !important;
+        }
+        .dropdown-menu li a:hover{
+background-color:transparent !important;
+        }
+        .form-control:focus {
+  outline: none !important;
+}
+      </style>
+        <style>
+            .form-control:focus{
+              box-shadow: 0 0 0 0.25rem #B71D32 !important;
+            }
+            </style>
     <!------------------------------->
   </head>
 
   <body data-bs-spy="scroll" data-bs-target=".navbar">
-    <header>
+    <header style="width:100%" id="tophome">
     <!--Navbar's section-->
-    <nav class="navbar navbar-expand-lg bg-white">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-white" style="width:100%">
+        <div class="container-fluid" style="display:flex;">
             <a class="navbar-brand px-3 mt-1 mb-1" href="{{route('index')}}">
                 <img src="{{asset('public/images/Logo.psd.png')}}" alt="">
             </a>
@@ -48,49 +67,94 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active px-4" href="{{route('index')}}">Accueil</a>
+                <a class="nav-link elsize xp2" href="{{route('index')}}">Accueil</a>
               </li>
               <li class="nav-item dropdown">
 
-                <a class="nav-link px-4 dropdown-toggle" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Qui sommes nous</a>
+                <a class="nav-link  dropdown-toggle elsize xp2" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Qui sommes nous</a>
                 <ul class="dropdown-menu animate slideIn" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{route('quisommesnous')}}">A propos de nous</a></li>
-                    <li><a class="dropdown-item" href="{{route('motdudg')}}">Mot du P-DG</a></li>
-                    <li><a class="dropdown-item" href="{{route('certificationsetagrements')}}">Certifications et agréments</a></li>
+                    <li class="xx3 xx4" style="background-color:blue"><a class="dropdown-item elsize xx4" href="{{route('quisommesnous')}}" >A propos de nous</a></li>
+                    <li class="xx3"><a class="dropdown-item elsize"  href="{{route('motdudg')}}" >Mot du P-DG</a></li>
+                    <li class="xx3"><a class="dropdown-item elsize" href="{{route('certificationsetagrements')}}" >Certifications et agréments</a></li>
                   </ul>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link px-4" href="{{route('produits')}}">Nos Produits</a>
+                <a class="nav-link xp2  elsize" href="{{route('produits')}}" >Produits</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-4" href="{{route('actualite')}}">Actualités</a>
+                <a class="nav-link xp2  elsize" href="{{route('actualite')}}" >Actualités</a>
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link px-4 dropdown-toggle"  type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">CARRIERE</a>
+                <a class="nav-link  dropdown-toggle elsize xp2"  type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" >CARRIERE</a>
                 <ul class="dropdown-menu animate slideIn" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="{{route('offredemploi')}}">Carriere</a></li>
-                    <li><a class="dropdown-item" href="{{route('candidaturespontane')}}">Offre d'emploi</a></li>
-                    <li><a class="dropdown-item" href="{{route('candidaturespontane2')}}">Candidature spontanée</a></li>
+                    <li><a class="dropdown-item elsize" href="{{route('offredemploi')}}" >Carriere</a></li>
+                    <li><a class="dropdown-item elsize" href="{{route('candidaturespontane')}}" >Offre d'emploi</a></li>
+                    <li><a class="dropdown-item elsize" href="{{route('candidaturespontane2')}}" >Candidature spontanée</a></li>
                   </ul>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link px-4" href="{{route('contact')}}">Contact</a>
+                <a class="nav-link xp2  elsize" href="{{route('contact')}}">Contact</a>
               </li>
             </ul>
-              <div class="espace-client">
-                <p class="text-user">
-                  <i class="bx bxs-user"></i>
-                  <a href="https://quotation.elsewedy.dz/login" target="black" style="color: black;">Espace client</a><br>
-                  <div class="text-center">
-                    <a href="" target="black" style="color: black">AR</a>
+            <div class="container" style="display:flex;justify-content:space-around;align-items:center;width:50%">
+              <div class="search-container">
+                <form>
+                    <div class="md-form my-0">
+                      <input id="actSearchInput" class="form-control elsize" type="text" placeholder="Que cherchez vous?" aria-label="Search" style="font-size:10px">
+                    </div>
+                    <button id="actSearchBtn" href="#!" class="btn btn-outline-white btn-md my-0 ml-sm-2 elsize" type="submit" style="border-radius: 10px;"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+              <div class="" style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+               
+                <span class="text-center">
+                    <a href="" target="black" class="elsize" style="color: black;">AR</a>
                     <a> | </a>
-                    <a href="" target="black" style="color: black">ENG</a>
-                  </div>
-                </p>
+                    <a href="" target="black" class="elsize" style="color: black;">ENG</a>
+                  </span>
               </div>
+              <button type="button" class="btn elsize" style="color:white;background-color:#b30023;border-radius:50px;width:30%;"> <div style="display:flex;justify-content:center;align-items:center" class="text-user">
+                  <i class="bx bxs-user elsize" style="color:white" ></i>
+                  <a href="https://quotation.elsewedy.dz/login" style="color:white" class="elsize" target="black" >Espace client</a><br>
+                </div> </button>
+            </div>
+          <style>
+          .elsize{
+            font-size:15px !important;
+          }
+
+@media only screen and (max-width: 1350px) {
+  /* styles pour les écrans plus petits */
+  .elsize{
+            font-size:13px !important;
+          }
+}
+@media only screen and (max-width: 1234px) {
+  /* styles pour les écrans plus petits */
+  .elsize{
+            font-size:10px !important;
+          }
+}
+@media only screen and (max-width: 1072px) {
+  /* styles pour les écrans plus petits */
+  .elsize{
+            font-size:8px !important;
+          }
+}
+@media only screen and (max-width: 991px) {
+  /* styles pour les écrans plus petits */
+  .elsize{
+            font-size:15px !important;
+          }
+}
+
+li .active{
+  color:red;
+}
+          </style>
           </div>
         </div>
       </nav>
@@ -98,7 +162,7 @@
      <main>
   
     @yield('content')
-  </div>
+  
   </main>
 
    <!-- Newsletter -->
@@ -133,18 +197,18 @@
 
   <!-- New Footer -->
   <!-- Remove the container if you want to extend the Footer to full width. -->
-  <footer class="mt-5" style="background-color: #b30023; text-align: center;">
-    <div class="container pt-2 pb-2">
-      <div class="row pt-2">
+  <footer class="mt-5" style="background-color: #b30023; text-align: center;" >
+      <div class="row " style="height:100%">
           
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xm-3">
-          <div style="background-color: #DADADA; background-position: center; height: 100%; width: 50px; margin-top: -16px;">
-            <img src="{{ asset('public/images/Logo.psd.png') }}" alt="" style="width: 100%; height: 100%;">
-          </div>
+            <div id="myFooter" style="background-color: #DADADA; background-position: center; height: 100%; width: 150px; margin:auto;">
+             <a href="{{route('index')}}"><img src="{{ asset('public/images/Logo.psd.png') }}"  alt="" style="width: 80%; height: 80%;margin:auto;margin-top:10px"></a>   
+              </div>
         </div>
 
         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xm-6">
-          <p class="text-capitalize" style="color: white;"> <!-- display: inline-block; -->
+
+          <p class="text-capitalize" style="color: white;margin-top:20px;font-size:18px"> <!-- display: inline-block; -->
             Copyright &copy; <?php
             date_default_timezone_set('America/Chicago');
             $info = getdate();
@@ -155,7 +219,7 @@
         </div>
 
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xm-3">
-          <ul class="list-inline"> <!-- style="display: inline-block; margin-left: 10px;" -->
+          <ul class="list-inline" style="margin-top:20px"> <!-- style="display: inline-block; margin-left: 10px;" -->
             <li class="list-inline-item">
               <a href="javascript:void(0);">
                 <i class="fab fa-facebook-f fa-lg" style="color: white;"></i>
@@ -166,13 +230,13 @@
                 <i class="fab fa-linkedin fa-lg" style="color: white;"></i>
               </a>
             </li>
+            <li  class="list-inline-item" style="margin-left:50px"><button type="button" class="btn" style="background-color:white"><a href="#tophome" style="color:black"><i class="fa-sharp fa-solid fa-arrow-up" style="margin-right:5px"></i>Haut</a></button></li>
           </ul>
         </div>
 
       </div>
-    </div>
   </footer>
-  
+
 <!-- End of .container -->
   <!-- END New footer -->
   
@@ -239,7 +303,7 @@
     <script src="{{ asset('public/js/search_job.js')}}"></script>
     <script src="{{ asset('public/js/spantaneclient.js')}}"></script>
     <script src="{{ asset('public/js/spantaneclient2.js')}}"></script>
-
+  
     <script>
       var el = $('#prlbx');
 
@@ -275,6 +339,26 @@
         $('#prlbx').addClass('parallel-boxs');
       }
     });
+    $(document).ready(function() {
+    $('.btn-prod-menu2').mouseenter(function() {
+      $(this).addClass('active');
+      $('#' + $(this).data('show')).slideDown(200);
+    });
+    
+    $('.btn-prod-menu2').mouseleave(function() {
+      $(this).removeClass('active');
+      $('#' + $(this).data('show')).slideUp(200);
+    });
+    
+    $('.menu_items').mouseenter(function() {
+      $(this).stop();
+    });
+    
+    $('.menu_items').mouseleave(function() {
+      $('.btn-prod-menu2').removeClass('active');
+      $(this).slideUp(200);
+    });
+  });
     </script>
     
     <script> $('.hey').slick({
@@ -284,8 +368,8 @@
       slidesToShow: 4,
       slidesToScroll: 1,
       arrows: true,
-      nextArrow:$('.next'),
-      prevArrow:$('.prev'),
+      nextArrow:$('.nextprod'),
+      prevArrow:$('.prevprod'),
       responsive: [
         {
           breakpoint: 1024,
@@ -406,6 +490,30 @@
         // settings: "unslick"
         // instead of a settings object
       ]
+    });
+    $(document).ready(function() {
+      var url = window.location.href;
+      
+      // Set active class and styles for clicked navbar li
+      $('.navbar-nav .nav-item a').filter(function() {
+        return this.href == url;
+      }).addClass('active').css({
+       /* Change to your desired background color */
+        'color': 'red',
+        'background-color': 'transparent', /* Add this line to change the text color to white */
+        
+      });
+      // Set active class and styles for parent li of clicked dropdown menu
+      $('.dropdown-menu').find('a').each(function() {
+        if (this.href == url) {
+    $(this).closest('.nav-item').children("a").addClass('active').css({
+        /* Change to your desired background color */
+        /* Change the background color */
+        'color': 'red' /* Change the text color to white */
+    });
+}
+
+      });
     });
     </script>
     @yield('js')

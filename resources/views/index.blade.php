@@ -7,7 +7,8 @@
   <style>
     /* Default height for small devices */
     #intro-example {
-      height: 400px;
+      width: 100%;
+      margin: auto;
     }
     #accueil_btn{
         color: white;
@@ -18,17 +19,7 @@
       background: #b30023;
       border: transparent;
     }
-    .a_propos{
-        color: white;
-        background-color: rgb(172,144,132, 0.6);
-        opacity: 0.8;
-        font-weight: 500;
-        border-radius: 20px;
-    }
-    .a_propos:hover{
-      background: #b30023;
-      border: transparent;
-    }
+  
     #produits button{
         color: white;
         font-weight: 400;
@@ -40,14 +31,35 @@
     }
     #fil-cables{
       margin-top: 0%;
+      padding-bottom: 1% !important;
     }
     #acceil_text{
       padding-top: 10% !important;
       padding-bottom: 10% !important;
     }
-    #partenaires{
-      padding-top: 8%;
+    #produits{
+      padding-top: 2% !important;
     }
+    #partenaires{
+      padding-top: 0% !important;
+      padding-bottom: 0% !important;
+    }
+    #actualites{
+      padding-top: 0% !important;
+    }
+
+    /* Set the initial background color and opacity of the carousel images */
+    .portfolio-item {
+      background-color: #fcfcfc;
+      opacity: 0.6;
+      transition: background-color 0.5s ease, opacity 0.5s ease;
+    }
+    /* On hover, remove the background color and opacity */
+    .portfolio-item:hover {
+      background-color: transparent;
+      opacity: 1;
+    }
+
     @media only screen and (max-width: 760px){
       #fil-cables{
         margin-top: 8%;
@@ -56,18 +68,27 @@
     /* Height for devices larger than 992px */
     @media (min-width: 992px) {
       #intro-example {
-        height: 600px;
+        height: 700px;
       }
+    }
+
+    @media (min-width: 1618) {
+      #intro-example {
+        height: 300px;
+      }
+    }
+    .opac:hover{
+opacity: 1 !important;
     }
   </style>
 
   <!-- Background image -->
   <header id="intro-example" class="p-5 text-center bg-image pb-5 pt-5"
-  style="background-image: url('public/images/home_banner.webp');">
+  style="background-image: url('public/images/home_banner.webp'); background-repeat: no-repeat; background-size: cover; background-position: center center">
     <div id="acceil_text" class="mask" style="background-color: rgba(0, 0, 0, 0);">
       <div class="d-flex justify-content-center align-items-center h-100" style="float: left;">
         <div class="text-white" style="text-align: left;">
-          <h1 class="mt-5 mb-5" style="font-size: 200%; font-weight: 800">Construire<br>un avenir concret</h1>
+          <h1 class="mt-5 mb-5" style="font-size: 200%; font-weight: 900">Construire<br>un avenir concret</h1>
           <h5 class="mt-4 mb-4" style="font-size: 100%">
             Leader depuis plus de 80 ans
           </h5>
@@ -96,7 +117,7 @@
     </section>  -->
 
     <!--fil_cable's section-->
-    <section id="fil-cables">
+    <section id="fil-cables" >
       <!--<h1 class="display-4">FIL ET CÂBLES</h1>-->
       <h1 class="display-4">ELSEWEDY ELECTRIC</h1>
       <img class="points center" src="{{asset('public/images/points.png')}}" alt="">
@@ -112,7 +133,7 @@
       </h6>
       <div class="text-icon-fil1" style="background-color: transparent; height: 25px;width: 100%;"></div>
       <div class="button_a_propos">
-        <button type="button" class="a_propos" href="#!">à propos</button>
+      <a href="{{route('quisommesnous')}}"><button type="button" class="a_propos"> à propos</button></a>
       </div>
       <div class="text-icon-fil1" style="background-color: transparent; height: 120px;width: 100%;"></div>
       <div class="hline"></div>
@@ -162,13 +183,16 @@
       <img class="points center" src="{{asset('public/images/points.png')}}" alt="">
       <div style="background-color: #fff;height:30px;width: 100%;"></div>
           <div class="text-center">
-            <div class="d-flex align-items-center">
-              <div class="prev col">
-                <button type="button" class="btn btn-primary" href="#!">
-                  <i class="bx bxs-left-arrow"></i>
-                </button>
+            <div class="row">
+              <div class="prevprod col-2 d-flex" style="justify-content:center;align-items:center">
+                  <div class="opac" style="width:40px;height:40px;border-radius:50%;background-color:#B71D32;display: flex;
+                  justify-content: center;
+                  align-items: center;opacity:0.5;
+                ">
+                      <i class="fa-solid fa-chevron-left" style="color:white;font-size:25px;line-height: 1;"></i>
+                  </div>
               </div>
-              <div class="container hey row col-9">
+              <div class="container hey col-8">
                 <div class="col p-2">
                   <div class="portfolio-item">
                     <img src="{{asset('public/images/cables.jpg')}}" alt="">
@@ -225,28 +249,34 @@
                   </div>
                 </div>
             </div>
-            <div class="next col">
-              <button type="button" class="btn btn-primary" href="#!">
-                <i class="bx bxs-right-arrow"></i>
-              </button>
+            <div class="nextprod col-2 d-flex" style="justify-content:center !important;align-items:center !important">
+                <div class="opac" style="width:40px;height:40px;border-radius:50%;background-color:#B71D32;display: flex;
+                justify-content: center;
+                align-items: center;opacity:0.5
+              ">
+                   <i class="fa-solid fa-chevron-right" style="color:white;font-size:25px;line-height: 1;"></i>
+              </div>
             </div>
           </div>
         </div>
   </section> 
 
   <!--actualités's section -->
-  <section id="actualites">
+  <section id="actualites" >
     <h1 class="display-4">actualités</h1>
     <img class="points center" src="{{asset('public/images/points.png')}}" alt="">
     <div style="background-color: #fff;height:30px;width: 100%;"></div>
     <div class="text-center">
       <div class="row actual d-flex align-items-center back-act">
-        <div class="prev1 col">
-          <button type="button" class="btn btn-primary" href="#!">
-            <i class="bx bxs-left-arrow"></i>
-          </button>
+        <div class="prev1 col-2 d-flex" style="justify-content:center;align-items:center">
+            <div class="opac" style="width:40px;height:40px;border-radius:50%;background-color:white;display: flex;
+            justify-content: center;
+            align-items: center;opacity:0.5
+          ">
+                <i class="fa-solid fa-chevron-left" style="color:#B71D32;font-size:25px;line-height: 1;"></i>
+            </div>
         </div>
-        <div class="container act row col-9">
+        <div class="container act col-8">
           <div class="col px-5">
             <div class="act-item">
               <img src="{{asset('public/images/act1.png')}}" alt="">
@@ -254,7 +284,8 @@
                   <div>
                       <h6>La division solutions environnementales d'Elsewedy lance deux projets</h6>
                       <a href="#" class="act-suite position-absolute bottom-0 end-0">LA SUITE
-                        <i class="bx bxs-right-arrow" style="color: #fff;"></i></a>
+                        <i class="bx bxs-right-arrow" style="color: #fff;"></i>
+                      </a>
                   </div>
               </div>
             </div>
@@ -284,10 +315,13 @@
             </div>
           </div>
       </div>
-      <div class="next1 col">
-        <button type="button" class="btn btn-primary"href="#!">
-          <i class="bx bxs-right-arrow"></i>
-        </button>
+      <div class="next1 col-2 d-flex" style="justify-content:center !important;align-items:center !important">
+          <div class="opac" style="width:40px;height:40px;border-radius:50%;background-color:white;display: flex;
+          justify-content: center;
+          align-items: center;opacity:0.5
+        ">
+             <i class="fa-solid fa-chevron-right" style="color:#B71D32;font-size:25px;line-height: 1;"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -301,12 +335,15 @@
     <div class="text-center">
       <div style="background-color: #b30023;height:8px; "></div>
       <div class="row d-flex align-items-center" style="background-color: #DADADA;margin-right: 0px !important;margin-left: 0px !important;">
-        <div class="prev2 col" style="border: 1px solid transparent">
-          <button type="button" class="btn btn-primary" href="#!">
-            <i class="bx bxs-left-arrow"></i>
-          </button>
+        <div class="prev2 col-2 d-flex" style="justify-content:center;align-items:center">
+            <div class="opac" style="width:40px;height:40px;border-radius:50%;background-color:#B71D32;display: flex;
+            justify-content: center;
+            align-items: center;opacity:0.5
+          ">
+                <i class="fa-solid fa-chevron-left" style="color:white;font-size:25px;line-height: 1;"></i>
+            </div>
         </div>
-        <div class="container partenaire row col-9">
+        <div class="container partenaire  col-8">
           <div class="col px-4" style="border-right-style:dashed;border-right-width:2px; border-color: transparent;"> <!--  border-color: #b30023 -->
             <img src="{{asset('public/Logos/1x/CosiderPNG.png')}}" alt="">
           </div>
@@ -327,13 +364,17 @@
             <img src="{{asset('public/Logos/1x/SonatrachPNG.png')}}" alt="">
           </div>
         </div>
-        <div class="next2 col" style="border: 1px solid transparent">
-          <button type="button" class="btn btn-primary" href="#!">
-            <i class="bx bxs-right-arrow"></i>
-          </button>
+        <div class="next2 col-2 d-flex" style="justify-content:center !important;align-items:center !important">
+            <div class="opac" style="width:40px;height:40px;border-radius:50%;background-color:#B71D32;display: flex;
+            justify-content: center;
+            align-items: center;opacity:0.5
+          ">
+               <i class="fa-solid fa-chevron-right" style="color:white;font-size:25px;line-height: 1;"></i>
+          </div>
         </div>
     </div>
     <div style="background-color: #b30023;height:8px;width: 100%;">
   </div>
   </section>
+  <div class="text-icon-fil1" style="background-color: transparent; height: 25px;width: 100%;"></div>
   @endsection
